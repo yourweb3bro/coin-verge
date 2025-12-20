@@ -1,4 +1,4 @@
-import KpiCard from "../layout/kpicard";
+import KpiCard from "../layout/kpiCard";
 import { motion } from "framer-motion";
 
 const kpis = [
