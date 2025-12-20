@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+    --color-btn-bg: rgb(100, 111, 198);
+    --color-primary-color: rgb(108, 140, 225);
+    --color-bg: rgb(0, 5, 16);
+}
+
+@theme {
+    --color-btn: var(--color-btn-bg);
+    --color-primary: var(--color-primary-color);
+    --color-background: var(--color-bg);
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: 'Urbanist', sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+img {
+  pointer-events: none;
+}
