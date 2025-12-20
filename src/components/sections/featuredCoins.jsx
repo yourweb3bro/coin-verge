@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import FeaturedCard from "../layout/featuredCard";
 import CoinsRowSkeleton from "../sections/featuredCoinsSkeleton";
-import { motion } from "framer-motion";
 
 export default function FeaturedCoins() {
 
@@ -87,8 +86,7 @@ export default function FeaturedCoins() {
       </div>
 
       <div className="w-full flex items-center overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] ">
-            {loading ? (
-                // Card section skeleton render
+            {loading ? (               
                 <CoinsRowSkeleton count={10} gap="gap-6" />
             ) : (
             
@@ -96,13 +94,7 @@ export default function FeaturedCoins() {
                 
                 {sections.map((section) =>
                   section.data.map((coin) => (
-                  <motion.div
-                        key={coin.title}
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                    >
+                  
                   <FeaturedCard
                       key={coin.id}
                       title={section.title}
@@ -111,7 +103,6 @@ export default function FeaturedCoins() {
                       coinName={coin.name}
                       price={coin.current_price}
                       />
-                  </motion.div>
                 )))}
             </div>
             )}
