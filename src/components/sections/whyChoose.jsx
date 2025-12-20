@@ -3,8 +3,8 @@ import iconBolt from "../../assets/icon-bolt.svg";
 import iconSetting from "../../assets/icon-setting.svg";
 import IconedText from "../ui/iconedText";
 import PortfolioRateCard from "../layout/porfolioRateCard";
-import BehindPortfolioCard from "../../assets/behind-portfolio-card.svg"
-import AtomicLogo from "../../assets/atomic-logo.svg"
+import BehindPortfolioCard from "../../assets/behind-portfolio-card.svg";
+import AtomicLogo from "../../assets/atomic-logo.svg";
 import { motion } from "framer-motion";
 
 const reasons = [
