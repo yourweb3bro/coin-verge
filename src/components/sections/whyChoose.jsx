@@ -22,9 +22,9 @@ const reasons = [
     },
 ]
 
-export default function WhyChoose() {
+export default function WhyChoose({id}) {
     return (
-        <div className="flex flex-col md:flex-row md:gap-8 px-0 py-8 md:px-12 md:py-16 gap-14 justify-center">
+        <div id={id} className="flex flex-col md:flex-row md:gap-8 px-0 py-8 md:px-12 md:py-16 gap-14 justify-center">
             
             <div className="flex flex-col gap-6 w-full">
                 <div className="flex flex-col gap-2.5 text-center md:text-left">                

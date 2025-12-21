@@ -4,9 +4,9 @@ import BtcShield from "../../assets/btc-shield.svg";
 import PhoneIcon from "../../assets/phone-icon.svg";
 import IconedText from "../ui/iconedText";
 
-export default function NowIsTheTime() {
+export default function NowIsTheTime({id}) {
     return (
-        <div className="flex flex-col md:flex-row gap-0 md:gap-8 px-0 py-8 md:px-12 md:py-16 items-center justify-center">
+        <div id={id} className="flex flex-col md:flex-row gap-0 md:gap-8 px-0 py-8 md:px-12 md:py-16 items-center justify-center">
             <div className="flex w-full">
                 <img src={FloatCard} alt=""/>
             </div>

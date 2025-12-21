@@ -34,10 +34,10 @@ const faqs = [
   },
 ];
 
-export default function Faqs() {
+export default function Faqs({id}) {
 
   return (
-    <div className="flex flex-col gap-8 py-16 items-center w-full overflow-hidden">
+    <div id={id} className="flex flex-col gap-8 py-16 items-center w-full overflow-hidden">
         <div className="flex flex-col gap-2.5 items-center text-center">
             <p className="">Frequent <span className="text-primary">questions</span></p>
             <p className="text-2xl md:text-4xl">Find out more about CoinVerge.</p>

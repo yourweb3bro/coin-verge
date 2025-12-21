@@ -1,9 +1,36 @@
 import { useState, useRef, useEffect } from "react";
+import HireDialog from "../layout/hireDialog";
 import NavCta from "../ui/navCta";
 import NavBtn from "../ui/navBtn";
 import Logo from "../../assets/logo.svg";
 
 export default function NavBar() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navInfo = [
+    {
+      title: "Featured",
+      link: "#featuredCoins",
+    },
+    {
+      title: "Why CoinVerge",
+      link: "#whyChoose",
+    },
+    {
+      title: "Services",
+      link: "#weProvide",
+    },
+    {
+      title: "Benefits",
+      link: "#expandYourCrypto",
+    },
+    {
+      title: "FAQs",
+      link: "#faqs",
+    },
+  ]
+
   const [open, setOpen] = useState(false);
   const navRef = useRef(null);
 
@@ -40,16 +67,16 @@ export default function NavBar() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex gap-6 items-center">
-          <NavBtn title="Features" link="#" />
-          <NavBtn title="Benefits" link="#" />
-          <NavBtn title="Services" link="#" />
-          <NavBtn title="Why CoinVerge" link="#" />
-          <NavBtn title="FAQs" link="#" />
+          <NavBtn title={navInfo[0].title} link={navInfo[0].link} />
+          <NavBtn title={navInfo[1].title} link={navInfo[1].link} />
+          <NavBtn title={navInfo[2].title} link={navInfo[2].link} />
+          <NavBtn title={navInfo[3].title} link={navInfo[3].link} />
+          <NavBtn title={navInfo[4].title} link={navInfo[4].link} />
         </div>
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-          <NavCta title="Book a call" link="#" />
+          <NavCta title="Book a call" link={() => setIsOpen(true)} />
         </div>
 
         {/* Mobile toggle */}
@@ -79,15 +106,22 @@ export default function NavBar() {
         ${open ? "max-h-125 opacity-100" : "max-h-0 opacity-0"}`}
       >
         <div className="flex flex-col gap-6 px-6 py-6 bg-background">
-          <NavBtn title="Features" link="#" onClick={closeMenu} />
-          <NavBtn title="Benefits" link="#" onClick={closeMenu} />
-          <NavBtn title="Services" link="#" onClick={closeMenu} />
-          <NavBtn title="Why CoinVerge" link="#" onClick={closeMenu} />
-          <NavBtn title="FAQs" link="#" onClick={closeMenu} />
-          <NavCta title="Book a call" link="#" onClick={closeMenu} />
+          <NavBtn title={navInfo[0].title} link={navInfo[0].link} onClick={closeMenu} />
+          <NavBtn title={navInfo[1].title} link={navInfo[1].link} onClick={closeMenu} />
+          <NavBtn title={navInfo[2].title} link={navInfo[2].link} onClick={closeMenu} />
+          <NavBtn title={navInfo[3].title} link={navInfo[3].link} onClick={closeMenu} />
+          <NavBtn title={navInfo[4].title} link={navInfo[4].link} onClick={closeMenu} />
+          
+          <div className="block md:hidden">
+          <NavCta title="Book a call" link={() => setIsOpen(true)} />
+        </div>
         </div>
       </div>
     </nav>
+    <HireDialog
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+    />
     </>
   );
 }

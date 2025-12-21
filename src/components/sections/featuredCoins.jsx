@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import FeaturedCard from "../layout/featuredCard";
 import CoinsRowSkeleton from "../sections/featuredCoinsSkeleton";
 
-export default function FeaturedCoins() {
+export default function FeaturedCoins({id}) {
 
   const [coins, setCoins] = useState([]);
   const [trending, setTrending] = useState([]);
@@ -77,7 +77,7 @@ export default function FeaturedCoins() {
   ];
 
   return (
-    <div className="flex flex-col gap-8 py-16 items-center w-full overflow-hidden">
+    <div id={id} className="flex flex-col gap-8 py-16 items-center w-full overflow-hidden">
       <div className="flex flex-col gap-2.5 items-center">
         <p className="text-center">
           Featured <span className="text-primary">crypto coins</span>

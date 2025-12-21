@@ -5,11 +5,35 @@ import AppLogo from "../../assets/logo.svg";
 import FbIcon from "../../assets/icon-fb.svg";
 import IgIcon from "../../assets/icon-ig.svg";
 import XIcon from "../../assets/icon-x.svg";
+import { footer } from "framer-motion/client";
 
-export default function Footer() {
+export default function Footer({id}) {
+
+  const footerInfo = [
+    {
+      title: "Featured",
+      link: "#featuredCoins",
+    },
+    {
+      title: "Why CoinVerge",
+      link: "#whyChoose",
+    },
+    {
+      title: "Services",
+      link: "#weProvide",
+    },
+    {
+      title: "Benefits",
+      link: "#expandYourCrypto",
+    },
+    {
+      title: "FAQs",
+      link: "#faqs",
+    },
+  ]
 
   return (
-    <div className="flex flex-col gap-8 pt-16 pb-2 px- items-center w-full overflow-hidden">
+    <div id={id} className="flex flex-col gap-8 pt-16 pb-2 px- items-center w-full overflow-hidden">
         <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col w-full gap-4">
                 <img src={AppLogo} alt="" className="w-30" />
@@ -26,28 +50,28 @@ export default function Footer() {
                     <div className=""> <FooterMenu title={"Links"} isHeading /> </div>
                     <div className="flex flex-col gap-2">
                         <FooterMenu 
-                            title={"Features"}
-                            link={"#"}
+                            title={footerInfo[0].title}
+                            link={footerInfo[0].link}
                         />
 
                         <FooterMenu 
-                            title={"Benefits"}
-                            link={"#"}
+                            title={footerInfo[1].title}
+                            link={footerInfo[1].link}
                         />
 
                         <FooterMenu 
-                            title={"Services"}
-                            link={"#"}
+                            title={footerInfo[2].title}
+                            link={footerInfo[2].link}
                         />
 
                         <FooterMenu 
-                            title={"Why CoinVerge"}
-                            link={"#"}
+                            title={footerInfo[3].title}
+                            link={footerInfo[3].link}
                         />
 
                         <FooterMenu 
-                            title={"FAQs"}
-                            link={"#"}
+                            title={footerInfo[4].title}
+                            link={footerInfo[4].link}
                         />
                     </div>
                 </div>

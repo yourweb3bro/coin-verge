@@ -6,10 +6,10 @@ import BtcFilterIcon from "../../assets/btc-filter-icon.svg";
 import RocketIcon from "../../assets/rocket-icon.svg";
 import LooperBg from "../../assets/looper-bg.svg";
 
-export default function WeProvide() {
+export default function WeProvide({id}) {
 
   return (
-    <div className="flex flex-col gap-10 px-12 py-16 items-center">
+    <div id={id} className="flex flex-col gap-10 px-12 py-16 items-center">
         <div className="flex flex-col gap-2.5 items-center">
             <p className="text-center">
             We provide the <span className="text-primary">greatest solution.</span>

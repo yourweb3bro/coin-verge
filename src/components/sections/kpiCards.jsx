@@ -20,10 +20,10 @@ const kpis = [
     },
 ]
 
-export default function KpiCards() {
+export default function KpiCards(id) {
     return (
         
-        <div className="flex flex-wrap md:gap-8 px-0 py-8 md:px-12 md:py-16 gap-6 justify-center">
+        <div id={id} className="flex flex-wrap md:gap-8 px-0 py-8 md:px-12 md:py-16 gap-6 justify-center">
                 {kpis.map((kpi) => (
                 <motion.div
                 key={kpi.title}

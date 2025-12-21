@@ -1,6 +1,6 @@
 import RightArrow from "../../assets/right-arrow.svg";
 
-export default function Button({title, link, variant="primary"}) {
+export default function Button({title, onClick, variant="primary"}) {
     const variants = {
         primary: "bg-btn hover:bg-btn/80 border-black/10",
         secondary: "bg-white/10 border-black/5"
@@ -10,7 +10,7 @@ export default function Button({title, link, variant="primary"}) {
 
 
     return (
-        <button className={`backdrop-blur-xs cursor-pointer flex items-center text-nowrap justify-between rounded-full p-1.5 pl-6 gap-4 border font-normal text-base text-white transition-colors ${variantClass}`} href={link}
+        <button className={`backdrop-blur-xs cursor-pointer flex items-center text-nowrap justify-between rounded-full p-1.5 pl-6 gap-4 border font-normal text-base text-white transition-colors ${variantClass}`} onClick={onClick}
         >
         {title}
 

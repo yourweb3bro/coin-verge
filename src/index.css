@@ -12,6 +12,11 @@
     --color-background: var(--color-bg);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   background-color: var(--color-bg);
   font-family: 'Urbanist', sans-serif;

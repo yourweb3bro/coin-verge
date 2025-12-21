@@ -18,29 +18,53 @@ function App() {
     <div className='container mx-auto flex flex-col items-center px-4 md:px-0 overflow-x-hidden'>
       <NavBar />
 
-      <HeroSection />
+      <HeroSection 
+        id="hero"
+      />
 
-      <Partners />
+      <Partners 
+        id="partners"
+      />
 
-      <FeaturedCoins />
+      <FeaturedCoins 
+        id="featuredCoins"
+      />
       
-      <WhyChoose />
+      <WhyChoose 
+        id="whyChoose"
+      />
 
-      <KpiCards />
+      <KpiCards 
+        id="kpiCards"
+      />
 
-      <WeProvide />
+      <WeProvide 
+        id="weProvide"
+      />
 
-      <FramerBanner />
+      <FramerBanner 
+        id="framerBanner"
+      />
 
-      <NowIsTheTime />
+      <NowIsTheTime 
+        id="nowIsTheTime"
+      />
 
-      <ExpandYourCrypto />
+      <ExpandYourCrypto 
+        id="expandYourCrypto"
+      />
 
-      <ByYourSide />
+      <ByYourSide 
+        id="byYourSide"
+      />
 
-      <Faqs />
+      <Faqs 
+        id="faqs"
+      />
 
-      <Footer />
+      <Footer 
+        id="footer"
+      />
 
       <BackToTopBtn />
     </div>

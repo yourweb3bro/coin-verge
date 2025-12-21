@@ -23,10 +23,10 @@ const infos = [
     },
 ]
 
-export default function ByYourSide() {
+export default function ByYourSide({id}) {
 
   return (
-    <div className="flex flex-col gap-8 py-16 items-center w-full overflow-hidden">
+    <div id={id} className="flex flex-col gap-8 py-16 items-center w-full overflow-hidden">
         <div className="flex flex-col gap-2.5 items-center text-center">
             <p className="">By your side always</p>
             <p className="text-2xl md:text-4xl">Take advantage of our CoinVerge first!</p>
@@ -37,9 +37,10 @@ export default function ByYourSide() {
         <div className="flex p-0 md:px-12 w-full">
             <div className="flex items-center justify-center w-full text-center p-6 md:p-10 xl:p-18 gap-10 md:gap-18 min-w-70 bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10">
                 
-                <div className="flex gap-12 md:gap-20 flex-col lg:flex-row">
+                <div className="flex gap-12 md:gap-32 flex-col lg:flex-row">
                     {infos.map((info) => (
                     <InfoIcon 
+                        key={info.title}
                         icon={info.icon}
                         title={info.title}
                         description={info.description}

@@ -14,9 +14,9 @@ const partners = [
 ];
 
 
-export default function Partners() {
+export default function Partners({id}) {
     return (
-        <div className="flex flex-col gap-6 py-16 items-center w-full overflow-hidden shadow-[inset_60px_0px_40px_0px_rgb(0,5,16),inset_-60px_0px_40px_0px_rgb(0,5,16)] ">
+        <div id={id} className="flex flex-col gap-6 py-16 items-center w-full overflow-hidden shadow-[inset_60px_0px_40px_0px_rgb(0,5,16),inset_-60px_0px_40px_0px_rgb(0,5,16)] ">
             <p className="text-center gap-1 "> Trusted by top <span className="text-primary ">crypto platforms</span> </p>
 
             

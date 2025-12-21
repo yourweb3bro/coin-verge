@@ -1,9 +1,14 @@
+import { useState } from "react";
 import Button from "../ui/button";
 import FramerBannerBg from "../../assets/framer-banner-bg.svg";
+import HireDialog from "../layout/hireDialog";
 
-export default function FramerBanner() {
+export default function FramerBanner({id}) {
+
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <div className="flex p-0 md:p-18">
+        <div id={id} className="flex p-0 md:p-18">
             <div className="flex items-center overflow-hidden text-center md:text-start flex-col md:flex-row p-6 md:p-10 xl:p-18 gap-10 md:gap-18 min-w-70 bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10">
                     <div className="flex flex-col gap-2">
                         <p className="text-3xl">Framer-powered CoinVerge platform</p>
@@ -13,11 +18,15 @@ export default function FramerBanner() {
                     <div className="flex flex-col gap-6">
                         <Button 
                             title={"Get template"}
-                            link={"#"}
+                            onClick={() => setIsOpen(true)}
                         />
                         <img src={FramerBannerBg} alt="" className="absolute right-0 top-0 h-full -z-10"/>
                     </div>
             </div>
+            <HireDialog
+                isOpen={isOpen}
+                onClose={() => setIsOpen(false)}
+            />
         </div>
     );
 }
