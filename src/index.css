@@ -31,7 +31,7 @@ img {
 
 .fade-in-bottom {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(24px);
   animation: fadeInBottom 0.8s forwards;
   animation-delay: 0.5s;
 }
