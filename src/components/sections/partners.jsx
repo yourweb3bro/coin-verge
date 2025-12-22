@@ -16,30 +16,39 @@ const partners = [
 
 export default function Partners({id}) {
     return (
-        <div id={id} className="flex flex-col gap-6 py-16 items-center w-full overflow-hidden shadow-[inset_60px_0px_40px_0px_rgb(0,5,16),inset_-60px_0px_40px_0px_rgb(0,5,16)] ">
-            <p className="text-center gap-1 "> Trusted by top <span className="text-primary ">crypto platforms</span> </p>
+        <div
+            id={id}
+            className="flex flex-col gap-6 py-16 items-center w-full overflow-hidden shadow-[inset_60px_0px_40px_0px_rgb(0,5,16),inset_-60px_0px_40px_0px_rgb(0,5,16)]"
+        >
+            <p className="text-center gap-1">
+                Trusted by top <span className="text-primary">crypto platforms</span>
+            </p>
 
-            
-                <div className="flex w-max gap-24 -z-10 animate-[scroll_25s_linear_infinite] ">
-                    {partners.map((partner, i) => (
-                        <img key={`a-${i}`} src={partner} className="shrink-0" />
-                    ))}
-
-                    {partners.map((partner, i) => (
-                        <img key={`b-${i}`} src={partner} className="shrink-0" />
-                    ))}
-                
-            </div>
-
-
-            <style>
-                {`
-                @keyframes scroll {
-                    from { transform: translateX(0); }
-                    to { transform: translateX(-50%); }
+            <div
+                className="flex w-max gap-24 -z-10"
+                style={{
+                animation: "marquee 25s linear infinite",
+                whiteSpace: "nowrap",
+                }}
+                onMouseEnter={(e) =>
+                (e.currentTarget.style.animationPlayState = "paused")
                 }
-                `}
-            </style>
+                onMouseLeave={(e) =>
+                (e.currentTarget.style.animationPlayState = "running")
+                }
+            >
+                {[...partners, ...partners,...partners].map((partner, i) => (
+                <img key={i} src={partner} className="h-8 shrink-0 opacity-80" alt="" />
+                ))}
+
+                {/* Inline keyframes */}
+                <style>{`
+                @keyframes marquee {
+                    0% { transform: translateX(0%); }
+                    100% { transform: translateX(-34%); }
+                }
+                `}</style>
+            </div>
         </div>
     );
 }
