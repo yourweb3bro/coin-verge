@@ -1,4 +1,4 @@
-# Campus Earner
+# Coin Verge
 
 Coin Verge is a state-of-the-art crypto platform built to help users track and explore digital assets with ease. It combines a modern UI, performance-focused architecture, and security-first design to deliver a smooth and reliable experience.
 
